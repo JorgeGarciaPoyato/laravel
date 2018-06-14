@@ -41,6 +41,8 @@ Route::get('/users/todosu', 'UserController@todousers')->name('todosu');
 
 Route::resource('/users','UserController');
 
+Route::get('/pruebas', function() {  dd( Auth::user()->role->name); });
+
 
 
 
