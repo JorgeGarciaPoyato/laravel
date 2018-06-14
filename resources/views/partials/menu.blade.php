@@ -39,12 +39,12 @@
                     &nbsp
                     &nbsp
 
-                @else (Auth::user()->role_id == "1" || Auth::user()->role_id == "2") 
+              @elseif ( Auth::user()->role->name == 'Admin' || Auth::user()->role->name == 'Teacher' )
 
                 <a href="/admin" class="text-uppercase">Administración</a>
                     &nbsp
                     &nbsp
-            @endif
+              @endif
             <a href="/about" >About</a></li>
                     &nbsp
                     &nbsp
